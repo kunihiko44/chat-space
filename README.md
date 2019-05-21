@@ -59,3 +59,17 @@ Things you may want to cover:
 - belongs_to :user
 - belongs_to :group
 
+
+##messagesテーブル
+
+|column|Type|Option|
+|------|----|------|
+|body|text|index:true|
+|image|string|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :group
+
