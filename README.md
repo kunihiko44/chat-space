@@ -60,7 +60,7 @@ Things you may want to cover:
 - belongs_to :group
 
 
-##messagesテーブル
+## messagesテーブル
 
 |column|Type|Option|
 |------|----|------|
