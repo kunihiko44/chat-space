@@ -47,3 +47,15 @@ Things you may want to cover:
 - has_many :messages
 - has_many :members
 
+
+## menbersテーブル
+
+|column|Type|Option|
+|------|----|------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null:false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :group
+
