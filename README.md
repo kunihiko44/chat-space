@@ -35,3 +35,15 @@ Things you may want to cover:
 - has_many :messages
 - has_many :members
 
+
+## groupsテーブル
+
+|column|Type|Option|
+|------|----|------|
+|name|string|null: false, unique: true|
+
+### Association
+- has_many :users, through: members
+- has_many :messages
+- has_many :members
+
