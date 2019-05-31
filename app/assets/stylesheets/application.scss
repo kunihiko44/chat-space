@@ -23,10 +23,20 @@ html, body{
     background-color: #253141;
     line-height: 100px;
     &__user-name{
+      float: left;
       font-size: 16px;
       font-weight: bold;
       color: #FFFFFF;
       margin: 0 20px;
+    }
+    &__edit-user{
+      float: right;
+      color: #FFFFFF;
+      margin: 0 20px 0 5px;
+    }
+    &__new-group{
+      float: right;
+      color: #FFFFFF;
     }
   }
 }
