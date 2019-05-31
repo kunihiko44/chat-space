@@ -66,4 +66,11 @@ html, body{
     background-color: white;
     border-bottom: solid #eeeeee;
   }
+  .current-group{
+    &__name{
+      font-size: 20px;
+      color: #333333;
+      margin: 35px 40px 15px 40px;
+    }
+  }
 }
