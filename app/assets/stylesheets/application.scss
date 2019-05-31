@@ -55,3 +55,10 @@ html, body{
     margin: 0 20px 40px 20px;
   }
 }
+
+.main{
+  float: right;
+  height: 100%;
+  width: calc(100% - 300px);
+  background-color: #fafafa;
+}
