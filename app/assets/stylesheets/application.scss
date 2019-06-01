@@ -65,12 +65,18 @@ html, body{
     height: 100px;
     background-color: white;
     border-bottom: solid #eeeeee;
+    padding: 0 40px;
   }
   .current-group{
     &__name{
       font-size: 20px;
       color: #333333;
-      margin: 35px 40px 15px 40px;
+      padding-top: 35px;
+    }
+    &__member{
+      font-size: 12px;
+      color: #999999;
+      padding-top: 15px;
     }
   }
 }
