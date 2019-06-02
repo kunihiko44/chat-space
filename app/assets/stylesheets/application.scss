@@ -61,6 +61,7 @@ html, body{
   height: 100%;
   width: calc(100% - 300px);
   background-color: #fafafa;
+  position: relative;
   &__header{
     height: 100px;
     background-color: white;
@@ -91,6 +92,7 @@ html, body{
   }
   &__messages{
     padding: 46px 40px;
+    position: relative;
     &__message{
       padding-bottom: 40px;
       .message-info{
@@ -112,5 +114,13 @@ html, body{
         color: #434A54;
       }
     }
+  }
+  &__input-form{
+    height: 90px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 0 40px;
+    background-color: lightgray;
   }
 }
