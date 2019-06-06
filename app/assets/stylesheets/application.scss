@@ -1,6 +1,10 @@
 @import "./reset";
 @import "font-awesome";
 
+*{
+  box-sizing: border-box;
+}
+
 html, body{
   height: 100%;
   width: 100%;
@@ -147,6 +151,18 @@ html, body{
         }
       }
     }
+    .submit-button{
+      position: relative;
+      float: right;
+      height: 50px;
+      width: 100px;
+      line-height: 50px;
+      text-align: center;
+      color: #FFFFFF;
+      background-color: #38AEF0;
+      padding: 0 20px ;
+      margin: 20px 0 20px 15px;
+      cursor: pointer;
+    }
   }
-  
 }
