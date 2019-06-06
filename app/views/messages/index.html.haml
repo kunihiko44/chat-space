@@ -36,5 +36,9 @@
    %div.main__input-form
     %form.new-message
      %div.input-box
+      %input.text-area(placeholder="type a message")
+      %label.upload-label{for: "upload-icon"}
+       %i.fa.fa-picture-o.fa-lg
+        %input.original-label(type="file" id="upload-icon")
      %div.submit-button(type="submit") Send
       
