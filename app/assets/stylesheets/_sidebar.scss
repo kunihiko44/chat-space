@@ -1,0 +1,44 @@
+$font-color-in-sidebar: #FFFFFF;
+
+.sidebar{
+  float: left;
+  height: 100%;
+  width: 300px;
+  background-color: #2f3e51;
+  &__header{
+    height: 100px;
+    background-color: #253141;
+    line-height: 100px;
+    color: $font-color-in-sidebar;
+    &__user-name{
+      float: left;
+      font-size: 16px;
+      font-weight: bold;
+      color: $font-color-in-sidebar;
+      margin: 0 20px;
+    }
+    &__edit-user{
+      float: right;
+      margin: 0 20px 0 5px;
+    }
+    &__new-group{
+      float: right;
+    }
+    i{
+      color: $font-color-in-sidebar;
+    }
+  }
+  &__group-info
+   .group__name{
+    font-size: 15px;
+    font-weight: bold;
+    color: $font-color-in-sidebar;
+    margin: 20px 20px 5px 20px;
+  }
+  .group__latest-message{
+    font-size: 11px;
+    font-weight: bold;
+    color: $font-color-in-sidebar;
+    margin: 0 20px 40px 20px;
+  }
+}

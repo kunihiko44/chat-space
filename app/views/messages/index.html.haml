@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+%html
+ %head
+ %body
+  %div.header グループを作成しました
+  %div.sidebar
+   %div.sidebar__header
+    %p.sidebar__header__user-name test-user
+    %div.sidebar__header__edit-user
+     =link_to do
+      %i.fa.fa-gear
+    %div.sidebar__header__new-group
+     =link_to do
+      %i.fa.fa-pencil-square-o
+   %div.sidebar__group-info
+    %div.group
+     %p.group__name test-group
+     %p.group__latest-message さようなら
+    %div.group
+     %p.group__name sample-group
+     %p.group__latest-message hello!
+    %div.group
+     %p.group__name example
+     %p.group__latest-message まだメッセージはありません
+  %div.main
+   %div.main__header
+    %div.current-group
+     %p.current-group__name test-group
+     %p.current-group__member Member : test-user
+    %div.main__header__edit-button Edit
+   %div.main__messages
+    %div.main__messages__message
+     %div.message-info
+      %p.message-info__user test-user
+      %p.message-info__date 2019/12/13(Wed) 17:50:42
+     %p.main__messages__message__text こんにちは！
+    %div.main__messages__message
+     %div.message-info
+      %p.message-info__user test-user
+      %p.message-info__date 2019/12/13(Wed) 17:50:55
+     %p.main__messages__message__text さようなら
+   %div.main__input-form
+    %form.new-message
+     %div.input-box
+      %input.text-area(placeholder="type a message")
+      %label.upload-label{for: "upload-icon"}
+       %i.fa.fa-picture-o.fa-lg
+        %input.original-label(type="file" id="upload-icon")
+     %div.submit-button(type="submit") Send
+      
