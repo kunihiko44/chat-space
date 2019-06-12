@@ -5,9 +5,10 @@
   %div.header グループを作成しました
   %div.sidebar
    %div.sidebar__header
-    %p.sidebar__header__user-name test-user
+    %p.sidebar__header__user-name
+     = current_user.name
     %div.sidebar__header__edit-user
-     =link_to do
+     =link_to edit_user_path(current_user) do
       %i.fa.fa-gear
     %div.sidebar__header__new-group
      =link_to do
