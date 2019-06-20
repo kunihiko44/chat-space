@@ -1,53 +1,21 @@
-<!DOCTYPE html>
-%html
- %head
- %body
-  %div.sidebar
-   %div.sidebar__header
-    %p.sidebar__header__user-name
-     = current_user.name
-    %div.sidebar__header__edit-user
-     =link_to edit_user_path(current_user) do
-      %i.fa.fa-gear
-    %div.sidebar__header__new-group
-     =link_to new_group_path(current_user) do
-      %i.fa.fa-pencil-square-o
-   %div.sidebar__group-info
-    - current_user.groups.each do |group|
-     %div.group
-      = link_to group_messages_path(group) do
-       %p.group__name 
-        = group.name
-       %p.group__latest-message メッセージはまだありません
-
-   %div.sidebar__group-info
-    %div.group
-     %p.group__name test-group
-     %p.group__latest-message メッセージはまだありません
-
-  %div.main
-   %div.main__header
-    %div.current-group
-     %p.current-group__name test-group
-     %p.current-group__member Member : test-user
-    %div.main__header__edit-button Edit
-   %div.main__messages
-    %div.main__messages__message
-     %div.message-info
-      %p.message-info__user test-user
-      %p.message-info__date 2019/12/13(Wed) 17:50:42
-     %p.main__messages__message__text こんにちは！
-    %div.main__messages__message
-     %div.message-info
-      %p.message-info__user test-user
-      %p.message-info__date 2019/12/13(Wed) 17:50:55
-     %p.main__messages__message__text さようなら
-   %div.main__input-form
-    %form.new-message
-     %div.input-box
-      %input.text-area(placeholder="type a message")
-      %label.upload-label{for: "upload-icon"}
-       %i.fa.fa-picture-o.fa-lg
-        %input.original-label(type="file" id="upload-icon")
-     %div.submit-button(type="submit") Send
-      
+.wrapper
+  = render 'shared/side_bar'
+%div.chat
+  %div.header
+    %div.left-header
+      %p.left-header__title test-group
+      %p.left-header__members Member: test-user
+    %div.rihgt-header
+      %div.right-header Edit
+  %div.messages
+    .messages
+    = render @messages
+  %div.form
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
