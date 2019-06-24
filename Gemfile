@@ -69,3 +69,7 @@ gem 'mini_magick'
 group :test, :development do 
   gem 'capybara'
 end
+
+gem 'jquery-ui-rails'
+
+gem 'pry-rails'
