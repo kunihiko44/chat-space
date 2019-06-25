@@ -42,10 +42,13 @@
   }
 
   .messages {
-    padding: 0 40px;
-    margin-top: 46px;
+    padding: 46px 40px 0 40px;
     position: relative;
+    height: calc(100% - 190px);
+    width: 100%;
+    overflow: scroll;
     .message {
+      position: relative;
       padding-bottom: 40px;
       .upper-message {
         margin-bottom: 10px;
