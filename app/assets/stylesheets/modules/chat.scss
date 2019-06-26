@@ -4,6 +4,7 @@
   float:right;
   position: relative;
   background-color: #FAFAFA;
+  overflow: auto;
   .header {
     height: 100px;
     padding: 0 40px;
@@ -17,12 +18,19 @@
         margin-top: 35px;
       }
       &__members {
-        color: $light_gray;
-        font-size: 12px;
-        margin-top: 15px;
+        .sub-title{
+          float: left;
+          color: $light_gray;
+          font-size: 12px;
+          margin-top: 15px;
+        }
         .member {
+          float:left;
+          color: $light_gray;
+          font-size: 12px;
+          margin-top: 15px;
           display: inline-block;
-          padding-right: 5px;
+          padding-left: 5px;
         }
       }
     }
@@ -42,10 +50,13 @@
   }
 
   .messages {
-    padding: 0 40px;
-    margin-top: 46px;
+    padding: 46px 40px 0 40px;
     position: relative;
+    height: calc(100% - 190px);
+    width: 100%;
+    overflow: auto;
     .message {
+      position: relative;
       padding-bottom: 40px;
       .upper-message {
         margin-bottom: 10px;
