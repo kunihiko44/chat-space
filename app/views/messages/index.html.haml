@@ -10,8 +10,10 @@
         %div.member
           - @group.group_users.each do |group_user|
             = group_user.user.name
-    %div.rihgt-header
-      %a.right-header Edit
+    %div.right-header
+      %a.right-header__button
+      = link_to edit_group_path(@group.id) do
+        Edit
   %div.messages
     = render @messages
   %div.form

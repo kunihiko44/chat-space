@@ -20,7 +20,7 @@ $(function() {
     member_list.append(html);
   }
 
-  $("#user-search-field").on("keyup", function(e) {
+  $(document).on("keyup", function(e) {
     e.preventDefault();
     var input = $("#user-search-field").val();
 
