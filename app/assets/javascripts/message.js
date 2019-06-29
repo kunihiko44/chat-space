@@ -2,7 +2,7 @@ $(function(){
 
   function buildHTML(message){
     var imagehtml = message.image.url == null ? "" : `<img src="${message.image.url}" class="lower-message__image">`
-    var html = `<div class="message">
+    var html = `<div class="message" data-id="message.id">
                   <div class="upper-message">
                     <div class="upper-message__user-name">
                      ${message.user_name}
@@ -20,7 +20,28 @@ $(function(){
                 </div>`
     return html;
   }
+  
+  var reloadMessages = function() {
+    //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
+    last_message_id = $('.message').last().data('message-id');
+    $.ajax({
+      //ルーティングで設定した通りのURLを指定
+      url: '/groups/:group_id/messages',
+      //ルーティングで設定した通りhttpメソッドをgetに指定
+      type: 'get',
+      dataType: 'json',
+      //dataオプションでリクエストに値を含める
+      data: {id: last_message_id}
+    })
+    .done(function(messages) {
+      console.log('success');
+    })
+    .fail(function() {
+      console.log('error');
+    });
+  };
 
+  
   $('#new_message').on('submit',function(e){
     e.preventDefault();
     var formData = new FormData(this);
