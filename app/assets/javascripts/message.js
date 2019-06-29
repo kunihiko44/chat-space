@@ -34,14 +34,18 @@ $(function(){
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      console.log('success');
+      var insertHTML = '';
+      data.forEach(function(message) {
+        insertHTML = buildHTML(message);
+        $('.messages').append(insertHTML);
+      });
     })
     .fail(function() {
       console.log('error');
     });
   };
 
-  
+
   $('#new_message').on('submit',function(e){
     e.preventDefault();
     var formData = new FormData(this);
